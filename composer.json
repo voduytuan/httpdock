@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "nyholm/psr7": "^1.4",
+        "nyholm/psr7-server": "^1.0",
+        "guzzlehttp/psr7": "^2",
+        "laminas/laminas-diactoros": "^2.8"
+    },
+    "scripts": {
+        "start": "php -S localhost:9000 -t public"
+    }
+}
