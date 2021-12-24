@@ -23,7 +23,7 @@ This API support following query parameters:
 - `status`: return HTTP Status code with this value. Eg: `/v1/mocks?status=201`, `/v1/mocks?status=404`...
 - `format`: Support 2 format, `json` (default) and `text`. Eg: `/v1/mocks?format=text`
 - `size`: payload size (in byte), in case you want to receive long length response. Eg: `/v1/mocks?size=1024`
-- `delay`: response delay (in miliseconds-ms). Eg: `/v1/mocks?delay=1000`
+- `delay`: response delay (in microsecond). Eg: `/v1/mocks?delay=2000000` (this response will delay 2 seconds = 2.000.000 microseconds)
 
 You can use one or all parameters in one request. Eg: `/v1/mocks?status=422&format=json&size=2048&delay=300`...
 
