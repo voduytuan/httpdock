@@ -1,6 +1,6 @@
 # httpdock
 
-Very simple mock HTTP Server to test Restful API, running via Docker.
+Very simple mock HTTP Server for testing Restful API, running via Docker.
 
 ## Start Server
 
