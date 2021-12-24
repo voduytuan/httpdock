@@ -26,3 +26,7 @@ This API support following query parameters:
 - `delay`: response delay (in miliseconds-ms). Eg: `/v1/mocks?delay=1000`
 
 You can use one or all parameters in one request. Eg: `/v1/mocks?status=422&format=json&size=2048&delay=300`...
+
+## Source code
+
+Source code of this project hosted at [https://github.com/voduytuan/httpdock]. This project is developed in Slim Framework v4, and running with Apache & PHP 8. You can customize service behaviors in file `./public/index.php` and build your own docker image (eg: `docker build . -t your-image`).
