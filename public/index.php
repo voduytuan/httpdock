@@ -14,6 +14,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 });
 
 $app->map(['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], '/v1/mocks', function (Request $request, Response $response, $args) {
+    $timeStart = microtime(true);
     $formData = $request->getQueryParams();
 
     $statusCode = isset($formData['status']) ? (int)$formData['status'] : 200;
@@ -41,6 +42,7 @@ $app->map(['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], '/v1/mocks', function (Re
 
     return $response
         ->withHeader('Content-Type', $format)
+        ->withHeader('Execution-Time', number_format((microtime(true) - $timeStart) * 1000, 2) . ' ms')
         ->withStatus((int)$statusCode);
 });
 
